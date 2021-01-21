@@ -4,16 +4,33 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rollup -c",
+    "demo": "parcel src/demo/index.html"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/core": "^7.12.10",
+    "@babel/plugin-transform-runtime": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@rollup/plugin-typescript": "^8.1.0",
     "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "history": "^5.0.0",
     "path-to-regexp": "^6.2.0",
     "react": "^17.0.1",
-    "tiny-warning": "^1.0.3"
+    "react-dom": "^17.0.1",
+    "rollup": "^2.37.1",
+    "src": "^1.1.2",
+    "tiny-warning": "^1.0.3",
+    "tslib": "^2.1.0",
+    "typescript": "^4.1.3"
+  },
+  "devDependencies": {
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1"
   }
 }

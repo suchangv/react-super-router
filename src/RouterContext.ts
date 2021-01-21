@@ -11,7 +11,7 @@ export interface Match<Params extends { [K in keyof Params]?: string } = {}> {
 interface RouterContextProps {
   history: History
   location: Location
-  match: Match
+  match: Match | null
 }
 
 const RouterContext = createContext<RouterContextProps | null>(null)

@@ -1,0 +1,5 @@
+1. 纯hooks编写
+2. 支持cache，允许不卸载未匹配但已经加载过的路由组件
+3. 支持懒加载，预计使用@loadable/components，切换路由时先hold住当前页面，等next route加载完毕之后再进行组件切换，类似ant design官网的效果
+4. 支持stack，类似于app，不卸载上一父路由
+5. 支持自定义路由动画，提供路由前后钩子

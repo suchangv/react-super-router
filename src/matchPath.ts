@@ -14,24 +14,10 @@ interface CompilePathResult {
   keys: Key[]
 }
 
-const cache: Record<string, Record<string, CompilePathResult>> = {}
-const cacheLimit = 10000
-let cacheCount = 0
-
 function compilePath(path: string, options: Options): CompilePathResult {
-  const cacheKey = `${options.end}${options.strict}${options.sensitive}`
-  const pathCache = cache[cacheKey] || (cache[cacheKey] = {})
-
-  if (pathCache[path]) return pathCache[path]
-
   const keys: Key[] = []
   const regexp = pathToRegexp(path, keys, options)
   const result: CompilePathResult = { regexp, keys }
-
-  if (cacheCount < cacheLimit) {
-    pathCache[path] = result
-    cacheCount++
-  }
 
   return result
 }
