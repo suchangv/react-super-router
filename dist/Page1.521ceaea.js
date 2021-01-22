@@ -147,7 +147,11 @@ var Page1 = function Page1(props) {
 
   return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h1", null, "Page1"), /*#__PURE__*/_react.default.createElement("button", {
     onClick: handleClick
-  }, "\u53BBpage2"));
+  }, "\u53BBpage2"), /*#__PURE__*/_react.default.createElement("button", {
+    onClick: function onClick() {
+      return props.history.push('/page3');
+    }
+  }, "\u53BBpage3"));
 };
 
 var _default = Page1;
@@ -180,7 +184,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

@@ -23,17 +23,24 @@ const Route: React.FC<RouteProps> = (props) => {
   const value = { history: context!.history, location, match }
   let { component, loader } = props
 
+  // 处理loader
   if (loader && !component) {
     component = loadable(loader)
   }
 
   return (
     <RouterContext.Provider value={value}>
-      {match
+      {/* <div style={{ display: match ? 'block' : 'none' }}>
+        {component ? React.createElement(component, value) : component}
+      </div> */}
+      <div>
+            {match
         ? component
           ? React.createElement(component, value)
           : component
         : null}
+        </div>
+
     </RouterContext.Provider>
   )
 }

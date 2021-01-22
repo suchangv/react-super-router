@@ -19,6 +19,7 @@ const Page1: React.FC<RouteComponentProps<Page1Params>> = (props) => {
     <div>
       <h1>Page1</h1>
       <button onClick={handleClick}>去page2</button>
+      <button onClick={() => props.history.push('/page3')}>去page3</button>
     </div>
   )
 }

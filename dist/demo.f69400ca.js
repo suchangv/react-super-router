@@ -31265,114 +31265,7 @@ function matchPath(pathname) {
 
 var _default = matchPath;
 exports.default = _default;
-},{"@babel/runtime/helpers/toArray":"../../node_modules/@babel/runtime/helpers/toArray.js","path-to-regexp":"../../node_modules/path-to-regexp/dist.es2015/index.js"}],"../../node_modules/@babel/runtime/helpers/classCallCheck.js":[function(require,module,exports) {
-function _classCallCheck(instance, Constructor) {
-  if (!(instance instanceof Constructor)) {
-    throw new TypeError("Cannot call a class as a function");
-  }
-}
-
-module.exports = _classCallCheck;
-},{}],"../../node_modules/@babel/runtime/helpers/createClass.js":[function(require,module,exports) {
-function _defineProperties(target, props) {
-  for (var i = 0; i < props.length; i++) {
-    var descriptor = props[i];
-    descriptor.enumerable = descriptor.enumerable || false;
-    descriptor.configurable = true;
-    if ("value" in descriptor) descriptor.writable = true;
-    Object.defineProperty(target, descriptor.key, descriptor);
-  }
-}
-
-function _createClass(Constructor, protoProps, staticProps) {
-  if (protoProps) _defineProperties(Constructor.prototype, protoProps);
-  if (staticProps) _defineProperties(Constructor, staticProps);
-  return Constructor;
-}
-
-module.exports = _createClass;
-},{}],"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js":[function(require,module,exports) {
-function _setPrototypeOf(o, p) {
-  module.exports = _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) {
-    o.__proto__ = p;
-    return o;
-  };
-
-  return _setPrototypeOf(o, p);
-}
-
-module.exports = _setPrototypeOf;
-},{}],"../../node_modules/@babel/runtime/helpers/inherits.js":[function(require,module,exports) {
-var setPrototypeOf = require("./setPrototypeOf");
-
-function _inherits(subClass, superClass) {
-  if (typeof superClass !== "function" && superClass !== null) {
-    throw new TypeError("Super expression must either be null or a function");
-  }
-
-  subClass.prototype = Object.create(superClass && superClass.prototype, {
-    constructor: {
-      value: subClass,
-      writable: true,
-      configurable: true
-    }
-  });
-  if (superClass) setPrototypeOf(subClass, superClass);
-}
-
-module.exports = _inherits;
-},{"./setPrototypeOf":"../../node_modules/@babel/runtime/helpers/setPrototypeOf.js"}],"../../node_modules/@babel/runtime/helpers/typeof.js":[function(require,module,exports) {
-function _typeof(obj) {
-  "@babel/helpers - typeof";
-
-  if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") {
-    module.exports = _typeof = function _typeof(obj) {
-      return typeof obj;
-    };
-  } else {
-    module.exports = _typeof = function _typeof(obj) {
-      return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj;
-    };
-  }
-
-  return _typeof(obj);
-}
-
-module.exports = _typeof;
-},{}],"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js":[function(require,module,exports) {
-function _assertThisInitialized(self) {
-  if (self === void 0) {
-    throw new ReferenceError("this hasn't been initialised - super() hasn't been called");
-  }
-
-  return self;
-}
-
-module.exports = _assertThisInitialized;
-},{}],"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js":[function(require,module,exports) {
-var _typeof = require("@babel/runtime/helpers/typeof");
-
-var assertThisInitialized = require("./assertThisInitialized");
-
-function _possibleConstructorReturn(self, call) {
-  if (call && (_typeof(call) === "object" || typeof call === "function")) {
-    return call;
-  }
-
-  return assertThisInitialized(self);
-}
-
-module.exports = _possibleConstructorReturn;
-},{"@babel/runtime/helpers/typeof":"../../node_modules/@babel/runtime/helpers/typeof.js","./assertThisInitialized":"../../node_modules/@babel/runtime/helpers/assertThisInitialized.js"}],"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js":[function(require,module,exports) {
-function _getPrototypeOf(o) {
-  module.exports = _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) {
-    return o.__proto__ || Object.getPrototypeOf(o);
-  };
-  return _getPrototypeOf(o);
-}
-
-module.exports = _getPrototypeOf;
-},{}],"../loadable.tsx":[function(require,module,exports) {
+},{"@babel/runtime/helpers/toArray":"../../node_modules/@babel/runtime/helpers/toArray.js","path-to-regexp":"../../node_modules/path-to-regexp/dist.es2015/index.js"}],"../loadable.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31380,15 +31273,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.default = void 0;
 
-var _classCallCheck2 = _interopRequireDefault(require("@babel/runtime/helpers/classCallCheck"));
-
-var _createClass2 = _interopRequireDefault(require("@babel/runtime/helpers/createClass"));
-
-var _inherits2 = _interopRequireDefault(require("@babel/runtime/helpers/inherits"));
-
-var _possibleConstructorReturn2 = _interopRequireDefault(require("@babel/runtime/helpers/possibleConstructorReturn"));
-
-var _getPrototypeOf2 = _interopRequireDefault(require("@babel/runtime/helpers/getPrototypeOf"));
+var _slicedToArray2 = _interopRequireDefault(require("@babel/runtime/helpers/slicedToArray"));
 
 var _react = _interopRequireWildcard(require("react"));
 
@@ -31398,84 +31283,32 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-function _createSuper(Derived) { var hasNativeReflectConstruct = _isNativeReflectConstruct(); return function _createSuperInternal() { var Super = (0, _getPrototypeOf2.default)(Derived), result; if (hasNativeReflectConstruct) { var NewTarget = (0, _getPrototypeOf2.default)(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return (0, _possibleConstructorReturn2.default)(this, result); }; }
-
-function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
-
-// const loadable = (
-//   loader: () => Promise<any>
-// ): React.ComponentType<any> | null => {
-//   const [component, setComponent] = useState<React.ComponentType<any> | null>(
-//     null
-//   )
-//   useEffect(() => {
-//     const getComponent = async () => {
-//       try {
-//         const component = await loader()
-//         setComponent(component.default)
-//       } catch (err) {
-//         console.error(err)
-//         setComponent(null)
-//       }
-//     }
-//     getComponent()
-//   }, [])
-//   return component || null
-// }
-// export default loadable
 var loadable = function loadable(loader) {
-  for (var _len = arguments.length, props = new Array(_len > 1 ? _len - 1 : 0), _key = 1; _key < _len; _key++) {
-    props[_key - 1] = arguments[_key];
-  }
+  return function (props) {
+    var _useState = (0, _react.useState)(null),
+        _useState2 = (0, _slicedToArray2.default)(_useState, 2),
+        Component = _useState2[0],
+        setComponent = _useState2[1];
 
-  return /*#__PURE__*/function (_PureComponent) {
-    (0, _inherits2.default)(_class, _PureComponent);
-
-    var _super = _createSuper(_class);
-
-    function _class() {
-      var _this;
-
-      (0, _classCallCheck2.default)(this, _class);
-      _this = _super.apply(this, arguments);
-      _this.state = {
-        component: null
-      };
-      return _this;
-    }
-
-    (0, _createClass2.default)(_class, [{
-      key: "componentDidMount",
-      value: function componentDidMount() {
-        var _this2 = this;
-
-        loader().then(function (res) {
-          var component = res.default;
-
-          _this2.setState({
-            component: component
-          });
+    (0, _react.useEffect)(function () {
+      loader().then(function (res) {
+        setComponent(function () {
+          return res.default;
         });
-      }
-    }, {
-      key: "render",
-      value: function render() {
-        var Component = this.state.component;
+      });
+    }, []);
 
-        if (!Component) {
-          return null;
-        } else {
-          return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, this.props));
-        }
-      }
-    }]);
-    return _class;
-  }(_react.PureComponent);
+    if (!Component) {
+      return null;
+    } else {
+      return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, props));
+    }
+  };
 };
 
 var _default = loadable;
 exports.default = _default;
-},{"@babel/runtime/helpers/classCallCheck":"../../node_modules/@babel/runtime/helpers/classCallCheck.js","@babel/runtime/helpers/createClass":"../../node_modules/@babel/runtime/helpers/createClass.js","@babel/runtime/helpers/inherits":"../../node_modules/@babel/runtime/helpers/inherits.js","@babel/runtime/helpers/possibleConstructorReturn":"../../node_modules/@babel/runtime/helpers/possibleConstructorReturn.js","@babel/runtime/helpers/getPrototypeOf":"../../node_modules/@babel/runtime/helpers/getPrototypeOf.js","react":"../../node_modules/react/index.js"}],"../Route.tsx":[function(require,module,exports) {
+},{"@babel/runtime/helpers/slicedToArray":"../../node_modules/@babel/runtime/helpers/slicedToArray.js","react":"../../node_modules/react/index.js"}],"../Route.tsx":[function(require,module,exports) {
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -31507,7 +31340,7 @@ var Route = function Route(props) {
     match: match
   };
   var component = props.component,
-      loader = props.loader;
+      loader = props.loader; // 处理loader
 
   if (loader && !component) {
     component = (0, _loadable.default)(loader);
@@ -31515,7 +31348,7 @@ var Route = function Route(props) {
 
   return /*#__PURE__*/_react.default.createElement(_RouterContext.default.Provider, {
     value: value
-  }, match ? component ? /*#__PURE__*/_react.default.createElement(component, value) : component : null);
+  }, /*#__PURE__*/_react.default.createElement("div", null, match ? component ? /*#__PURE__*/_react.default.createElement(component, value) : component : null));
 };
 
 var _default = Route;
@@ -31613,14 +31446,16 @@ var _index = require("../index");
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-// import Page1 from './Page1'
-// import Page2 from './Page2'
 var Page1 = function Page1() {
   return require("_bundle_loader")(require.resolve('./Page1'));
 };
 
 var Page2 = function Page2() {
   return require("_bundle_loader")(require.resolve('./Page2'));
+};
+
+var Page3 = function Page3() {
+  return require("_bundle_loader")(require.resolve('./Page3'));
 };
 
 var App = function App() {
@@ -31630,11 +31465,14 @@ var App = function App() {
   }), /*#__PURE__*/_react.default.createElement(_index.Route, {
     path: '/page2',
     loader: Page2
+  }), /*#__PURE__*/_react.default.createElement(_index.Route, {
+    path: '/page3',
+    loader: Page3
   }));
 };
 
 _reactDom.default.render( /*#__PURE__*/_react.default.createElement(App, null), document.getElementById('app'));
-},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","_bundle_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-loader.js","./Page1":[["Page1.521ceaea.js","Page1.tsx"],"Page1.521ceaea.js.map","Page1.tsx"],"./Page2":[["Page2.5f71fbdf.js","Page2.tsx"],"Page2.5f71fbdf.js.map","Page2.tsx"],"../index":"../index.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+},{"react":"../../node_modules/react/index.js","react-dom":"../../node_modules/react-dom/index.js","_bundle_loader":"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/bundle-loader.js","./Page1":[["Page1.521ceaea.js","Page1.tsx"],"Page1.521ceaea.js.map","Page1.tsx"],"./Page2":[["Page2.5f71fbdf.js","Page2.tsx"],"Page2.5f71fbdf.js.map","Page2.tsx"],"./Page3":[["Page3.d88e05ef.js","Page3.tsx"],"Page3.d88e05ef.js.map","Page3.tsx"],"../index":"../index.ts"}],"../../../../../../../usr/local/lib/node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -31662,7 +31500,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "49672" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

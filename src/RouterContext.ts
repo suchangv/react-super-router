@@ -8,7 +8,7 @@ export interface Match<Params extends { [K in keyof Params]?: string } = {}> {
   url: string
 }
 
-interface RouterContextProps {
+export interface RouterContextProps {
   history: History
   location: Location
   match: Match | null
