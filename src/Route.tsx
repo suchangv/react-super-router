@@ -5,9 +5,10 @@ import matchPath from './matchPath'
 
 import loadable from './loadable'
 
-interface RouteProps {
+interface RouteProps<T extends ComponentType<any> = ComponentType<any>> {
   component?: React.ComponentType<any>
-  loader: () => Promise<{ default: ComponentType<any> }>
+  loader?: () => Promise<{ default: T }>
+  // loader: () => Promise<{ default: any }>
   render?: (props: React.ComponentType<any>) => React.ReactNode
   path?: string
   exact?: boolean

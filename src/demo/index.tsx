@@ -1,10 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import { BrowserRouter as Router, Route } from '../index'
+
 const Page1 = () => import('./Page1')
 const Page2 = () => import('./Page2')
 const Page3 = () => import('./Page3')
-
-import { BrowserRouter as Router, Route } from '../index'
 
 const App: React.FC = () => {
   return (
