@@ -1,13 +1,10 @@
 import { History, Location, State } from 'history'
 import { Match } from './RouterContext'
 
-export interface RouteComponentProps<
-  Params extends { [K in keyof Params]?: string } = {},
-  S extends State = {}
-> {
+export interface RouteComponentProps<Params extends { [K in keyof Params]?: string } = {}, S extends State = {}> {
   history: History
   location: Location<S>
   match: Match<Params>
 }
 
-export type Loader = () => Promise<any>
+export type Loader = () => void

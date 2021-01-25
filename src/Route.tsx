@@ -1,14 +1,13 @@
-import React, { useContext } from 'react'
+import React, { ComponentType, useContext } from 'react'
 
 import RouterContext from './RouterContext'
 import matchPath from './matchPath'
 
 import loadable from './loadable'
-import { Loader } from './types'
 
 interface RouteProps {
   component?: React.ComponentType<any>
-  loader?: Loader
+  loader: () => Promise<{ default: ComponentType<any> }>
   render?: (props: React.ComponentType<any>) => React.ReactNode
   path?: string
   exact?: boolean
@@ -30,17 +29,7 @@ const Route: React.FC<RouteProps> = (props) => {
 
   return (
     <RouterContext.Provider value={value}>
-      {/* <div style={{ display: match ? 'block' : 'none' }}>
-        {component ? React.createElement(component, value) : component}
-      </div> */}
-      <div>
-            {match
-        ? component
-          ? React.createElement(component, value)
-          : component
-        : null}
-        </div>
-
+      <div>{match ? (component ? React.createElement(component, value) : component) : null}</div>
     </RouterContext.Provider>
   )
 }

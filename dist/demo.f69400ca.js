@@ -31283,8 +31283,8 @@ function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj;
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-var loadable = function loadable(loader) {
-  return function (props) {
+function loadable(loader) {
+  var C = function C(props) {
     var _useState = (0, _react.useState)(null),
         _useState2 = (0, _slicedToArray2.default)(_useState, 2),
         Component = _useState2[0],
@@ -31304,7 +31304,9 @@ var loadable = function loadable(loader) {
       return /*#__PURE__*/_react.default.createElement(Component, Object.assign({}, props));
     }
   };
-};
+
+  return C;
+}
 
 var _default = loadable;
 exports.default = _default;
@@ -31500,7 +31502,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "62371" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "51193" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

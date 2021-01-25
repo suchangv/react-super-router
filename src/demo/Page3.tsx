@@ -1,5 +1,5 @@
 import React from 'react'
-import { RouteComponentProps, useParams } from '../index'
+import { RouteComponentProps } from '../index'
 
 interface Page3Params {
   id: string
