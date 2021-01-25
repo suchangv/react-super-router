@@ -1,21 +1,21 @@
 import React, { ComponentType, useEffect, useState } from 'react'
 import { RouterContextProps } from './RouterContext'
 
-function loadable<T extends ComponentType<any>>(loader: () => Promise<{ default: T }>) {
-  const C = function (props: RouterContextProps | null) {
+const loadable = <T extends ComponentType<any>>(loader: () => Promise<{ default: T }>) => {
+  const C: React.FC<RouterContextProps> = (props) => {
     const [Component, setComponent] = useState<ComponentType<any> | null>(null)
     useEffect(() => {
       loader().then((res) => {
         setComponent(() => res.default)
       })
     }, [])
+
     if (!Component) {
       return null
-    } else {
-      return <Component {...props} />
     }
+    return <Component {...props} />
   }
-
+  C.displayName = 'loadable'
   return C
 }
 
