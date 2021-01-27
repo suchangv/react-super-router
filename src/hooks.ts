@@ -9,7 +9,7 @@ export function useLocation() {
   return useContext(RouterContext)?.location
 }
 
-export function useParams() {
+export function useParams<Params extends { [K in keyof Params]?: string } = {}>(): Params {
   const match = useContext(RouterContext)?.match
-  return match ? match.params : {}
+  return ((match ? match.params : {}) as unknown) as Params
 }

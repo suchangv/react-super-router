@@ -7,7 +7,7 @@ interface Page1Params {
 }
 
 const Page1: React.FC<RouteComponentProps<Page1Params>> = (props) => {
-  const params = useParams()
+  const params = useParams<Page1Params>()
   console.log(props)
   console.log(params)
   console.log(props.match.params)
