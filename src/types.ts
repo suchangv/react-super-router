@@ -6,5 +6,3 @@ export interface RouteComponentProps<Params extends { [K in keyof Params]?: stri
   location: Location<S>
   match: Match<Params>
 }
-
-export type Loader = () => void
