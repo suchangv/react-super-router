@@ -1,6 +1,6 @@
 import React, { ComponentType, useContext } from 'react'
 
-import RouterContext from './RouterContext'
+import RouterContext, { RouterContextProps } from './RouterContext'
 import matchPath from './matchPath'
 
 import loadable from './loadable'
@@ -19,8 +19,8 @@ const Route: React.FC<RouteProps> = (props) => {
   const context = useContext(RouterContext)
   const location = context!.location
   const match = matchPath(location.pathname, props)
-  const value = { history: context!.history, location, match }
   let { component, loader } = props
+  const value: RouterContextProps = { history: context!.history, location, match }
 
   // 处理loader
   if (loader && !component) {
