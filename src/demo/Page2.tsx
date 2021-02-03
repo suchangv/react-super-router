@@ -11,9 +11,7 @@ interface Page2State {
   b: number
 }
 
-class Page2 extends PureComponent<
-  RouteComponentProps<Page2Params, Page2State>
-> {
+class Page2 extends PureComponent<RouteComponentProps<Page2Params, Page2State>> {
   handleClick = () => {
     this.props.history.back()
   }
